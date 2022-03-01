@@ -1,6 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 import { getHackrs } from "../data";
 import Hackr from "./hackr";
+import { useContractRead } from "wagmi";
 
 export default function NFTs() {
     const hackrs = getHackrs();
@@ -8,7 +9,6 @@ export default function NFTs() {
         <div style={{ display: "flex" }}>
           <nav
             style={{
-            //   borderRight: "solid 1px",
               padding: "1rem",
             }}
           >

@@ -1,6 +1,6 @@
-import { useParams } from "react-router-dom";
-
-export default function Hackr() {
-    const params = useParams();
-    return <h2>Hackr #{params.tokenId}</h2>;
+export default function Hackr(props) {
+    return (<div>
+        <h2>Hackr #{props.tokenId}</h2>
+        <img src={props.image}/>
+    </div>);
 }

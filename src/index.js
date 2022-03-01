@@ -7,7 +7,6 @@ import {
 import App from "./App";
 import Mint from "./routes/mint";
 import NFTs from "./routes/nfts";
-import Hackr from "./routes/hackr";
 
 const rootElement = document.getElementById("root");
 render(
@@ -15,9 +14,7 @@ render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="Mint" element={<Mint />} />
-        <Route path="NFTs" element={<NFTs />} >
-          <Route path=":tokenId" element={<Hackr />} />
-        </Route>
+        <Route path="NFTs" element={<NFTs />} />
         <Route
           path="*"
           element={

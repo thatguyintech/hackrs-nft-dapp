@@ -1,5 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import { getHackrs } from "../data";
+import Hackr from "./hackr";
 
 export default function NFTs() {
     const hackrs = getHackrs();
@@ -12,13 +13,7 @@ export default function NFTs() {
             }}
           >
             {hackrs.map((hackr) => (
-              <Link
-                style={{ display: "block", margin: "1rem 0" }}
-                to={`/nfts/${hackr.tokenId}`}
-                key={hackr.tokenId}
-              >
-                {hackr.name}
-              </Link>
+                <Hackr tokenId={hackr.tokenId} image={hackr.image}/>
             ))}
           </nav>
           <Outlet/>
